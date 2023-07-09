@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            body{
+                text-align: center;
+                color: rgb(7, 20, 86);
+                padding-bottom:300px;
+                margin-top:200px;
+                margin-left:300px;
+                margin-right: 300px;
+                background:#ffffff;
+                align-items: center;
+            }
+            .container{
+                color: rgb(7, 20, 86);
+                font-size: 100px;
+                box-sizing: border-box;
+                background: #ffffff;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 style="padding-top:50px" id="hedline">Hello World</h1>
+        <div class="container">
+        </div>
+        <script>
+            var datetime
+            var time
+            var date
+            var x = document.getElementsByClassName("container")
+            setInterval(() => {
+                datetime = new Date()
+                time = datetime.getHours()+":"+datetime.getMinutes()+":"+datetime.getSeconds()
+                date = datetime.toLocaleDateString()
+                x[0].innerHTML = "Current Time: "
+                x[0].innerHTML = "Date:  "+date+"<br>Time: "+time
+
+            }, 1000);
+        </script>
+    </body>
+</html>
